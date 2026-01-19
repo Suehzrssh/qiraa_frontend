@@ -5,7 +5,7 @@ const api = axios.create({
 });
 
 // Debug (optional)
-console.log("http://localhost:4000/books");
+console.log(import.meta.env.VITE_API_URL);
 
 /* =======================
    GENRES
