@@ -1,0 +1,23 @@
+{
+  "name": "Qira’a",
+  "short_name": "Qira’a",
+  "description": "Read. Reflect. Remain.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/icons/qiraa.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/qiraat.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
