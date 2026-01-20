@@ -1,3 +1,5 @@
+
+
 export default function Reader({
   selectedBook,
   selectedChapter,
@@ -53,32 +55,23 @@ export default function Reader({
             ))}
           </ul>
 
-          {/* Context panels */}
-          <div className="mt-6 space-y-4 border-t border-neutral-800 pt-4">
-            {selectedBook.historical_context && (
-  <details open className="group">
-    <summary className="cursor-pointer text-sm font-medium text-neutral-200">
-      Historical context
-    </summary>
-    <p className="mt-2 text-sm text-neutral-300 leading-relaxed max-w-prose">
-      {selectedBook.historical_context}
-    </p>
-  </details>
-)}
+         {/* Context panels */}
+<div className="mt-6 border-t border-neutral-800 pt-4">
+  <h3 className="text-lg text-neutral-200 mb-2">
+    Historical Context
+  </h3>
+  <p className="text-sm text-neutral-300 leading-relaxed mb-6">
+    {selectedBook.historical_context}
+  </p>
 
+  <h3 className="text-lg text-neutral-200 mb-2">
+    About the Author
+  </h3>
+  <p className="text-sm text-neutral-300 leading-relaxed">
+    {selectedBook.author_bio}
+  </p>
+</div>
 
-           {selectedBook.author_bio && (
-  <details open className="group">
-    <summary className="cursor-pointer text-sm font-medium text-neutral-200">
-      About the author
-    </summary>
-    <p className="mt-2 text-sm text-neutral-300 leading-relaxed max-w-prose">
-      {selectedBook.author_bio}
-    </p>
-  </details>
-)}
-
-          </div>
         </div>
       )}
 
