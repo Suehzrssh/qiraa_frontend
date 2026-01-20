@@ -4,7 +4,7 @@ import Reader from "./components/Reader";
 import {
   fetchGenres,
   fetchBooks,
-  readBook, // 🔑 NEW
+  fetchBook,
 } from "./api/books.js";
 
 export default function App() {
@@ -12,7 +12,6 @@ export default function App() {
   const [selectedBook, setSelectedBook] = useState(null);
   const [selectedChapter, setSelectedChapter] = useState(null);
 
-  // load genres + books
   useEffect(() => {
     async function load() {
       const genresData = await fetchGenres();
@@ -42,8 +41,7 @@ export default function App() {
         <BookList
           genres={genres}
           onSelectBook={async (book) => {
-            // 🔑 ONE REQUEST — FULL BOOK
-            const fullBook = await readBook(book.id);
+            const fullBook = await fetchBook(book.id); // ✔ FIXED
             setSelectedBook(fullBook);
             setSelectedChapter(null);
           }}
@@ -53,7 +51,6 @@ export default function App() {
           selectedBook={selectedBook}
           selectedChapter={selectedChapter}
           onSelectChapter={(chapter) => {
-            // ✅ NO API CALL
             setSelectedChapter(chapter);
           }}
           onBack={() => setSelectedChapter(null)}
