@@ -21,21 +21,21 @@ export default function Reader({
           <div className="flex gap-6 mb-6">
             <img
               src={selectedBook.image}
-              className="w-32 h-44 object-cover rounded-xl"
+              className="w-32 h-44 object-cover rounded-xl uppercase"
               alt={selectedBook.title}
             />
 
             <div>
-              <h2 className="text-2xl mb-1">
+              <h2 className="text-2xl mb-1 capitalize">
                 {selectedBook.title}
               </h2>
 
-              <p className="text-neutral-400">
+              <p className="text-neutral-400 capitalize">
                 {selectedBook.author}
               </p>
 
               {selectedBook.info && (
-                <p className="mt-1 text-sm text-neutral-500 leading-snug">
+                <p className="mt-1 text-sm text-neutral-500 leading-snug capitalize">
                   {selectedBook.info}
                 </p>
               )}

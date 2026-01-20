@@ -5,7 +5,7 @@ export default function BookList({ genres, onSelectBook }) {
     <section className="md:col-span-1 space-y-6">
       {genres.map((genre) => (
         <div key={genre.id}>
-          <h2 className="text-lg mb-2 text-neutral-300">
+          <h2 className="text-lg mb-2 text-neutral-300 uppercase">
             {genre.title}
           </h2>
 

@@ -4,16 +4,16 @@ export default function BookCard({ book, onSelect }) {
       onClick={() => onSelect(book)}
       className="w-full text-left p-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 transition"
     >
-      <p className="font-medium text-neutral-100">
+      <p className="font-medium text-neutral-100 capitalize">
         {book.title}
       </p>
 
-      <p className="text-xs text-neutral-400">
+      <p className="text-xs text-neutral-400 capitalize">
         {book.author}
       </p>
 
       {/* Book info */}
-      <p className="text-xs text-neutral-500 mt-1">
+      <p className="text-xs text-neutral-500 mt-1 capitalize">
         {book.info}
       </p>
     </button>
