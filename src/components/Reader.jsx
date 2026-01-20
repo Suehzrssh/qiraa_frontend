@@ -6,6 +6,7 @@ export default function Reader({
   onSelectChapter,
   onBack,
 }) {
+  console.log("READER selectedBook:", selectedBook);
   return (
     <section className="md:col-span-2 bg-neutral-900 rounded-2xl p-6">
       {!selectedBook && (
