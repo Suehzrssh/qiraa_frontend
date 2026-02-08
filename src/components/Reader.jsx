@@ -61,14 +61,14 @@ export default function Reader({
   <h3 className="text-lg text-neutral-200 mb-2">
     Historical Context
   </h3>
-  <p className="text-sm text-neutral-300 leading-relaxed mb-6">
+  <p className="text-sm text-neutral-300 leading-relaxed mb-6 text-justify">
     {selectedBook.historical_context}
   </p>
 
   <h3 className="text-lg text-neutral-200 mb-2">
     About the Author
   </h3>
-  <p className="text-sm text-neutral-300 leading-relaxed">
+  <p className="text-sm text-neutral-300 leading-relaxed text-justify">
     {selectedBook.author_bio}
   </p>
 </div>
